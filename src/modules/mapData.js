@@ -22,6 +22,5 @@ export default async function mapData(jsonMap) {
     organizedMap.floors[floorsIdx].push(floor);
   });
 
-  console.log(organizedMap);
   return organizedMap;
-};
+}
