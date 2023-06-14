@@ -1,5 +1,5 @@
 import './src/styles/style.css';
-import domMapPage from './src/modules/domMapPage';
+import domHome from './src/modules/domHome';
 
 const app = document.querySelector('#app');
-app.append(domMapPage());
+app.append(domHome());
