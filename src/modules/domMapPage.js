@@ -1,6 +1,6 @@
 import drawMapInfo from './drawMapInfo';
 
-export default function domMapPage() {
+export default function domMapPage(jsonMap) {
   const mapPage = document.createElement('section');
   const mapViewer = document.createElement('div');
   mapViewer.setAttribute('id', 'map-viewer');
@@ -17,7 +17,7 @@ export default function domMapPage() {
     input.addEventListener('change', () => {
       const floor = document.querySelector('.floor');
       const variant = document.querySelector('.variant');
-      drawMapInfo('./json/mapgen/house/2storymodern01.json', floor.value, variant.value);
+      drawMapInfo(jsonMap, floor.value, variant.value);
     });
     inputNums.push(input);
   });
@@ -29,6 +29,3 @@ export default function domMapPage() {
 
   return mapPage;
 }
-
-// show map on load
-drawMapInfo('./json/mapgen/house/2storymodern01.json', 0, 0);
