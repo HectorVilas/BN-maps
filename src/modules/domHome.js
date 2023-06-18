@@ -1,5 +1,6 @@
 import domMapPage from './domMapPage';
-import drawMapInfo from './drawMapInfo';
+
+const app = document.querySelector('#app');
 
 export default function domHome() {
   const section = document.createElement('main');
@@ -18,10 +19,8 @@ export default function domHome() {
   mapList.forEach((link) => {
     const li = document.createElement('li');
     li.textContent = link.split('/').at(-1).split('.json').at(0);
-    li.addEventListener('click', () => {
-      const app = document.querySelector('#app');
-      app.replaceChildren(domMapPage(link));
-      drawMapInfo(link, 0, 0);
+    li.addEventListener('click', async () => {
+      app.replaceChildren(await domMapPage(link));
     });
 
     ul.append(li);
