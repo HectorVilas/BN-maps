@@ -4,8 +4,6 @@ export default async function mapData(jsonMap) {
   const fetchMap = await fetch(jsonMap);
   const map = await fetchMap.json();
   const organizedMap = {
-    width: map[0].object.rows[0].length,
-    height: map[0].object.rows.length,
     floors: [],
   };
 
