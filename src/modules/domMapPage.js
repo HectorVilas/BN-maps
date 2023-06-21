@@ -18,9 +18,11 @@ export default async function domMapPage(jsonMap) {
 
   loadedMap.blueprint.floors.forEach((floor, i) => {
     const div = document.createElement('div');
+    div.classList.add('floor-btn-div');
 
     const omTerrain = floor[0].om_terrain;
     const btnFloor = document.createElement('button');
+    btnFloor.classList.add('floor-btn');
     btnFloor.textContent = `${
       typeof omTerrain === 'string' ? omTerrain : `[${omTerrain.toString().split(',').join('] [')}]`
     }`;
@@ -36,8 +38,11 @@ export default async function domMapPage(jsonMap) {
     div.append(btnFloor);
     if (floor.length > 1) {
       const btnVariantNext = document.createElement('button');
+      btnVariantNext.classList.add('floor-btn-next');
       btnVariantNext.textContent = '>';
+
       const btnVariantPrev = document.createElement('button');
+      btnVariantPrev.classList.add('floor-btn-prev');
       btnVariantPrev.textContent = '<';
 
       btnVariantNext.addEventListener('click', () => {
