@@ -10,6 +10,13 @@ const loadedMap = {
 export default async function domMapPage(jsonMap) {
   loadedMap.blueprint = await mapData(jsonMap);
 
+  // for testing
+  const btnBack = document.createElement('button');
+  btnBack.textContent = 'Back to list';
+  btnBack.addEventListener('click', () => {
+    window.location.reload();
+  });
+
   const mapPage = document.createElement('section');
   const mapViewer = document.createElement('div');
   mapViewer.id = 'map-viewer';
@@ -70,6 +77,7 @@ export default async function domMapPage(jsonMap) {
 
   mapViewer.append(drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant));
   mapPage.append(
+    btnBack,
     mapViewer,
     floorList,
   );
