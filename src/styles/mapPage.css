@@ -18,3 +18,28 @@
   text-align: center;
   color: white;
 }
+
+#map-floors {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.floor-btn-div {
+  --next-prev-width: 30px;
+  display: grid;
+  grid-template-columns: var(--next-prev-width) 1fr var(--next-prev-width);
+  grid-template-areas: "prev floor next";
+  height: 40px;
+}
+
+.floor-btn {
+  grid-area: floor;
+}
+
+.floor-btn-next {
+  grid-area: next;
+}
+.floor-btn-prev {
+  grid-area: prev;
+}
