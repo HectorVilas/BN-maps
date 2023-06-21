@@ -33,6 +33,8 @@ export default async function domMapPage(jsonMap) {
     btnFloor.textContent = `${
       typeof omTerrain === 'string' ? omTerrain : `[${omTerrain.toString().split(',').join('] [')}]`
     }`;
+    if (btnFloor.textContent.includes('_roof')) btnFloor.classList.add('roof');
+    if (btnFloor.textContent.includes('_basement')) btnFloor.classList.add('basement');
 
     btnFloor.addEventListener('click', () => {
       loadedMap.floor = i;
