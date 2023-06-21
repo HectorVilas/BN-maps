@@ -17,3 +17,9 @@ main {
   height: 100%;
   display: flex;
 }
+
+li:hover {
+  cursor: pointer;
+  color: white;
+  list-style-type: circle;
+}
