@@ -23,18 +23,24 @@ export default async function domMapPage(jsonMap) {
   const floorList = document.createElement('div');
   floorList.id = 'map-floors';
 
-  loadedMap.blueprint.floors.forEach((floor, i) => {
+  loadedMap.blueprint.floors.reverse().forEach((floor, i) => {
+    const omTerrain = floor[0].om_terrain;
+
     const div = document.createElement('div');
     div.classList.add('floor-btn-div');
+    div.style.zIndex = i * -1;
 
-    const omTerrain = floor[0].om_terrain;
-    const btnFloor = document.createElement('button');
-    btnFloor.classList.add('floor-btn');
-    btnFloor.textContent = `${
+    const para = document.createElement('p');
+    para.classList.add('floor-om-terrain');
+    para.textContent = `${
       typeof omTerrain === 'string' ? omTerrain : `[${omTerrain.toString().split(',').join('] [')}]`
     }`;
-    if (btnFloor.textContent.includes('_roof')) btnFloor.classList.add('roof');
-    if (btnFloor.textContent.includes('_basement')) btnFloor.classList.add('basement');
+
+    const btnFloor = document.createElement('div');
+    btnFloor.classList.add('floor-btn');
+    btnFloor.value = para.textContent;
+    if (btnFloor.value.includes('_roof')) btnFloor.classList.add('roof');
+    if (btnFloor.value.includes('_basement')) btnFloor.classList.add('basement');
 
     btnFloor.addEventListener('click', () => {
       loadedMap.floor = i;
@@ -44,13 +50,13 @@ export default async function domMapPage(jsonMap) {
       );
     });
 
-    div.append(btnFloor);
+    div.append(btnFloor, para);
     if (floor.length > 1) {
-      const btnVariantNext = document.createElement('button');
+      const btnVariantNext = document.createElement('div');
       btnVariantNext.classList.add('floor-btn-next');
       btnVariantNext.textContent = '>';
 
-      const btnVariantPrev = document.createElement('button');
+      const btnVariantPrev = document.createElement('div');
       btnVariantPrev.classList.add('floor-btn-prev');
       btnVariantPrev.textContent = '<';
 
