@@ -23,21 +23,49 @@
 #map-floors {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: fit-content;
+  isolation: isolate;
 }
+
 
 .floor-btn-div {
   --next-prev-width: 30px;
   display: grid;
-  grid-template-columns: var(--next-prev-width) 1fr var(--next-prev-width);
-  grid-template-areas: "prev floor next";
+  grid-template-columns: var(--next-prev-width) auto var(--next-prev-width) 1fr;
+  grid-template-areas: "prev floor next para";
   gap: 5px;
+  height: 30px;
+  transition: 300ms ease-in-out;
+}
+
+#map-floors:hover .floor-btn-div {
   height: 40px;
 }
 
 .floor-btn {
+  width: calc(109px / 1.5);
+  height: calc(92px / 1.5);
   position: relative;
   grid-area: floor;
+  cursor: pointer;
+  background-image: url(../media/images/btn-floor.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+
+.floor-btn-div:not(:hover) .floor-btn-next,
+.floor-btn-div:not(:hover) .floor-btn-prev {
+  display: none;
+}
+
+.floor-btn-next,
+.floor-btn-prev {
+  text-align: center;
+  border: 1px solid black;
+  background-color: #333;
+  height: 75%;
+  align-self: flex-end;
   cursor: pointer;
 }
 
@@ -48,7 +76,24 @@
   grid-area: prev;
 }
 
-.floor-btn.roof::after,
+.floor-btn.roof {
+  background-image: url(../media/images/btn-floor-roof.png);
+}
+
+.floor-btn.basement {
+  background-image: url(../media/images/btn-floor-basement.png);
+}
+
+.floor-om-terrain {
+  grid-area: para;
+  /* color: red; */
+  font-family: monospace;
+  font-size: 1.25rem;
+  margin: 0;
+  height: fit-content;
+  align-self: center;
+}
+/* .floor-btn.roof::after,
 .floor-btn.basement::after {
   position: absolute;
   left: 0;
@@ -62,4 +107,4 @@
 }
 .floor-btn.basement::after {
   content: "[Basement]";
-}
+} */
