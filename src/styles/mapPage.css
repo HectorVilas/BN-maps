@@ -67,6 +67,7 @@
   height: 75%;
   align-self: flex-end;
   cursor: pointer;
+  user-select: none;
 }
 
 .floor-btn-next {
@@ -86,25 +87,26 @@
 
 .floor-om-terrain {
   grid-area: para;
-  /* color: red; */
   font-family: monospace;
-  font-size: 1.25rem;
+  font-weight: 900;
+  font-size: 1rem;
+  color: #bbb;
   margin: 0;
+  padding: 5px 0;
   height: fit-content;
   align-self: center;
-}
-/* .floor-btn.roof::after,
-.floor-btn.basement::after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 1px;
-  box-shadow: 1px 1px 2px #ccc;
+  cursor: pointer;
+  user-select: none;
 }
 
-.floor-btn.roof::after {
-  content: "[Roof]";
+.floor-om-terrain > span {
+  color: #aaa;
+  font-size: .9rem;
 }
-.floor-btn.basement::after {
-  content: "[Basement]";
-} */
+
+.floor-om-terrain:hover,
+.floor-om-terrain:hover > span {
+  color: white;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
