@@ -36,18 +36,26 @@ export default async function domMapPage(jsonMap) {
       typeof omTerrain === 'string' ? omTerrain : `[${omTerrain.toString().split(',').join('] [')}]`
     }`;
 
+    if (floor.length > 1) {
+      const span = document.createElement('span');
+      span.textContent = ` (${floor.length} variants)`;
+      para.append(span);
+    }
+
     const btnFloor = document.createElement('div');
     btnFloor.classList.add('floor-btn');
     btnFloor.value = para.textContent;
     if (btnFloor.value.includes('_roof')) btnFloor.classList.add('roof');
     if (btnFloor.value.includes('_basement')) btnFloor.classList.add('basement');
 
-    btnFloor.addEventListener('click', () => {
-      loadedMap.floor = i;
-      loadedMap.variant = 0;
-      mapViewer.replaceChildren(
-        drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
-      );
+    [btnFloor, para].forEach((element) => {
+      element.addEventListener('click', () => {
+        loadedMap.floor = i;
+        loadedMap.variant = 0;
+        mapViewer.replaceChildren(
+          drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
+        );
+      });
     });
 
     div.append(btnFloor, para);
