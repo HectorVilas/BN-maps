@@ -23,23 +23,10 @@ export default async function domMapPage(jsonMap) {
   const floorList = document.createElement('div');
   floorList.id = 'map-floors';
 
-  const omTerrainList = (() => {
-    const list = [];
-    loadedMap.blueprint.floors.forEach((floor) => {
-      const floors = [];
-      floor.forEach((variant) => {
-        floors.push(variant.om_terrain);
-      });
-      list.push(floors);
-    });
-
-    return list;
-  })();
-
   floorList.replaceChildren(
-    ...createFloorList(omTerrainList, loadedMap, mapViewer.id),
+    ...await createFloorList(loadedMap, mapViewer.id),
   );
-  mapViewer.append(drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant));
+  mapViewer.append(await drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant));
   mapPage.append(
     btnBack,
     mapViewer,
