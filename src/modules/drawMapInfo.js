@@ -1,6 +1,6 @@
-export default function drawMapInfo(jsonMap, floor, variant) {
+export default async function drawMapInfo(jsonMap, floor, variant) {
   const generatedMap = document.createElement('div');
-  const chosenMap = jsonMap.floors[floor][variant];
+  const chosenMap = await jsonMap.floors[floor][variant];
   const chosenMapWidth = chosenMap.object.rows[0].length;
   const chosenMapHeight = chosenMap.object.rows.length;
 
@@ -8,11 +8,12 @@ export default function drawMapInfo(jsonMap, floor, variant) {
     const row = document.createElement('div');
     row.classList.add('row');
     for (let x = 0; x < chosenMapWidth; x += 1) {
+      const char = chosenMap.object.rows[y][x];
       const tile = document.createElement('div');
       tile.classList.add('tile');
       tile.dataset.x = x;
       tile.dataset.y = y;
-      tile.textContent = `${chosenMap.object.rows[y][x]}`;
+      tile.textContent = `${char}`;
 
       row.append(tile);
     }
