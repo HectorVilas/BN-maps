@@ -1,4 +1,4 @@
-export default async function drawMapInfo(jsonMap, floor, variant) {
+export default async function drawVisualMap(jsonMap, floor, variant) {
   const generatedMap = document.createElement('div');
   const chosenMap = await jsonMap.floors[floor][variant];
   const chosenMapWidth = chosenMap.object.rows[0].length;

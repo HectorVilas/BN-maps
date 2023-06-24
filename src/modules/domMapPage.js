@@ -1,5 +1,5 @@
 import mapData from './mapData';
-import drawMapInfo from './drawMapInfo';
+import drawVisualMap from './drawVisualMap';
 import createFloorList from './createFloorList';
 
 export default async function domMapPage(jsonMap) {
@@ -26,7 +26,7 @@ export default async function domMapPage(jsonMap) {
   floorList.replaceChildren(
     ...await createFloorList(loadedMap, mapViewer.id),
   );
-  mapViewer.append(await drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant));
+  mapViewer.append(await drawVisualMap(loadedMap.blueprint, loadedMap.floor, loadedMap.variant));
   mapPage.append(
     btnBack,
     mapViewer,

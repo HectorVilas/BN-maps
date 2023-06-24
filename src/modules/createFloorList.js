@@ -1,4 +1,4 @@
-import drawMapInfo from './drawMapInfo';
+import drawVisualMap from './drawVisualMap';
 
 export default async function createFloorList(loadedMapInfo, mapViewerId) {
   const loadedMap = loadedMapInfo;
@@ -30,7 +30,7 @@ export default async function createFloorList(loadedMapInfo, mapViewerId) {
         loadedMap.floor = i;
         loadedMap.variant = 0;
         mapViewer.replaceChildren(
-          await drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
+          await drawVisualMap(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
         );
       });
     });
@@ -52,7 +52,7 @@ export default async function createFloorList(loadedMapInfo, mapViewerId) {
         loadedMap.variant += 1;
         if (!floor[loadedMap.variant]) loadedMap.variant = 0;
         mapViewer.replaceChildren(
-          await drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
+          await drawVisualMap(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
         );
       });
       btnVariantPrev.addEventListener('click', async () => {
@@ -61,7 +61,7 @@ export default async function createFloorList(loadedMapInfo, mapViewerId) {
         loadedMap.variant -= 1;
         if (!floor[loadedMap.variant]) loadedMap.variant = floor.length - 1;
         mapViewer.replaceChildren(
-          await drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
+          await drawVisualMap(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
         );
       });
       div.append(btnVariantNext, btnVariantPrev);
