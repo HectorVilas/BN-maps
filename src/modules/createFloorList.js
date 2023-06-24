@@ -1,16 +1,16 @@
 import drawMapInfo from './drawMapInfo';
 
-export default function createFloorList(omTerrainList, loadedMapInfo, mapViewerId) {
+export default async function createFloorList(loadedMapInfo, mapViewerId) {
   const loadedMap = loadedMapInfo;
   const buttonsList = [];
-  omTerrainList.reverse().forEach((floor, i) => {
+  loadedMap.blueprint.floors.reverse().forEach((floor, i) => {
     const div = document.createElement('div');
     div.classList.add('floor-btn-div');
     div.style.zIndex = i * -1;
 
     const para = document.createElement('p');
     para.classList.add('floor-om-terrain');
-    para.textContent = floor.at(0);
+    para.textContent = floor[0].om_terrain;
 
     if (floor.length > 1) {
       const span = document.createElement('span');
@@ -25,12 +25,12 @@ export default function createFloorList(omTerrainList, loadedMapInfo, mapViewerI
     if (btnFloor.value.includes('_basement')) btnFloor.classList.add('basement');
 
     [btnFloor, para].forEach((element) => {
-      element.addEventListener('click', () => {
+      element.addEventListener('click', async () => {
         const mapViewer = document.querySelector(`#${mapViewerId}`);
         loadedMap.floor = i;
         loadedMap.variant = 0;
         mapViewer.replaceChildren(
-          drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
+          await drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
         );
       });
     });
@@ -45,23 +45,23 @@ export default function createFloorList(omTerrainList, loadedMapInfo, mapViewerI
       btnVariantPrev.classList.add('floor-btn-prev');
       btnVariantPrev.textContent = '<';
 
-      btnVariantNext.addEventListener('click', () => {
+      btnVariantNext.addEventListener('click', async () => {
         const mapViewer = document.querySelector(`#${mapViewerId}`);
         if (loadedMap.floor !== i) loadedMap.variant = 0;
         loadedMap.floor = i;
         loadedMap.variant += 1;
         if (!floor[loadedMap.variant]) loadedMap.variant = 0;
         mapViewer.replaceChildren(
-          drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
+          await drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
         );
       });
-      btnVariantPrev.addEventListener('click', () => {
+      btnVariantPrev.addEventListener('click', async () => {
         const mapViewer = document.querySelector(`#${mapViewerId}`);
         loadedMap.floor = i;
         loadedMap.variant -= 1;
         if (!floor[loadedMap.variant]) loadedMap.variant = floor.length - 1;
         mapViewer.replaceChildren(
-          drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
+          await drawMapInfo(loadedMap.blueprint, loadedMap.floor, loadedMap.variant),
         );
       });
       div.append(btnVariantNext, btnVariantPrev);
