@@ -110,3 +110,16 @@
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
+
+/* tile test */
+/* .tile {
+  color: rgba(255, 255, 255, .1);
+  --tileset-width: 16;
+  --tile-x: 5;
+  --tile-y: 20;
+  background:
+  calc(100% - 100% * var(--tile-x)) calc(100% - 100% * var(--tile-y))
+  url(../../gfx/BrownLikeBears/tiles.png);
+  image-rendering: pixelated;
+  background-size: calc(100% * var(--tileset-width));
+} */
