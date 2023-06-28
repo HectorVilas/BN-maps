@@ -28,6 +28,6 @@ const mapgenFolder = listFiles('./public/json/mapgen/');
 const mapgenPalletesFolder = listFiles('./public/json/mapgen_palettes/');
 const tilesetsFolder = listFiles('./public/gfx/');
 
-dumpToFile('./public/fileList/blueprints.json', mapgenFolder);
-dumpToFile('./public/fileList/blueprints_palettes.json', mapgenPalletesFolder);
+dumpToFile('./public/fileList/mapgen.json', mapgenFolder);
+dumpToFile('./public/fileList/mapgen_palettes.json', mapgenPalletesFolder);
 dumpToFile('./public/fileList/tilesets.json', tilesetsFolder);
