@@ -11,5 +11,6 @@ module.exports = {
   },
   rules: {
     'linebreak-style': 0,
+    'no-restricted-syntax': ['error', 'FunctionExpression', 'WithStatement', "BinaryExpression[operator='in']"],
   },
 };
