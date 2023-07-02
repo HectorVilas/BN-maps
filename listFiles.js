@@ -6,6 +6,7 @@ function listFiles(directory) {
 
   files.forEach((file) => {
     if (file.includes('.')) {
+      // eslint-disable-next-line no-restricted-syntax
       if (!('files' in filesFolders)) Object.assign(filesFolders, { files: [] });
       filesFolders.files.push(`${directory}${file}/`);
     } else {
@@ -17,7 +18,7 @@ function listFiles(directory) {
 
 async function dumpToFile(filename, content) {
   try {
-    await promises.writeFile(filename, JSON.stringify(content));
+    await promises.writeFile(filename, JSON.stringify(content, null, 2));
   } catch (error) {
     // eslint-disable-next-line no-console
     console.log(error);
