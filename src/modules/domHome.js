@@ -1,34 +1,18 @@
-import domMapPage from './domMapPage';
+import createMapgenList from './createMapgenList';
 
-const app = document.querySelector('#app');
-
-export default function domHome() {
+export default async function domHome() {
   const section = document.createElement('main');
 
   const h1 = document.createElement('h1');
   h1.textContent = 'BN Maps';
 
-  const ul = document.createElement('ul');
-  const mapList = [
-    './json/mapgen/house/2storymodern01.json',
-    './json/mapgen/house/bungalow01.json',
-    './json/mapgen/house/garden_house_1.json',
-    './json/mapgen/house/house_garage_prepper.json',
-    './json/mapgen/house/urban_1_house.json',
-  ];
-  mapList.forEach((link) => {
-    const li = document.createElement('li');
-    li.textContent = link.split('/').at(-1).split('.json').at(0);
-    li.addEventListener('click', async () => {
-      app.replaceChildren(await domMapPage(link));
-    });
-
-    ul.append(li);
-  });
+  const mapList = document.createElement('div');
+  mapList.append(await createMapgenList());
 
   section.append(
     h1,
-    ul,
+    mapList,
   );
+
   return section;
 }
