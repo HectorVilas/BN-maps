@@ -3,4 +3,8 @@ import './src/styles/mapPage.css';
 import domHome from './src/modules/domHome';
 
 const app = document.querySelector('#app');
-app.append(domHome());
+async function loadApp() {
+  app.append(await domHome());
+}
+
+loadApp();
