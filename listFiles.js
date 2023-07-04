@@ -8,7 +8,9 @@ function listFiles(directory) {
     if (file.includes('.')) {
       // eslint-disable-next-line no-restricted-syntax
       if (!('files' in filesFolders)) Object.assign(filesFolders, { files: [] });
-      filesFolders.files.push(`${directory}${file}/`);
+      // removing ./public/ as Vite moves everything from here to the root folder
+      const directoryNoPublic = directory.split('public/').join('');
+      filesFolders.files.push(`${directoryNoPublic}${file}/`);
     } else {
       Object.assign(filesFolders, { [file]: listFiles(`${directory}${file}/`) });
     }
