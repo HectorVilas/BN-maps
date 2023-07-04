@@ -17,8 +17,10 @@ function listFolder(fileList, title) {
           li.title = fileList[file][i];
 
           li.addEventListener('click', async () => {
+            const fixedItem = `./${item}`;
             const app = document.querySelector('#app');
-            app.replaceChildren(await domMapPage(li.title));
+            // app.replaceChildren(await domMapPage(fixedItem));
+            app.replaceChildren(await domMapPage(fixedItem));
           });
 
           ul.append(li);
@@ -33,7 +35,7 @@ function listFolder(fileList, title) {
 }
 
 export default async function createMapgenList() {
-  const fetchFileList = await fetch('../../fileList/mapgen.json');
+  const fetchFileList = await fetch('../../bn-maps/fileList/mapgen.json');
   const fileList = await fetchFileList.json();
 
   return listFolder(fileList, 'root');
