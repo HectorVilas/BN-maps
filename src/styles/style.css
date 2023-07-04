@@ -18,8 +18,31 @@ main {
   display: flex;
 }
 
+ul {
+  padding: 10px;
+}
+
+li:nth-child(2n-1) {
+  background-color: rgba(255, 255, 255, .01);
+}
+
 li:hover {
   cursor: pointer;
   color: white;
   list-style-type: circle;
+  background-color: rgba(255, 255, 255, .03);
+}
+
+.mapgen-list-folder {
+  background-color: rgba(255, 255, 255, .03);
+  padding-left: 10px;
+  margin: 10px;
+  background: linear-gradient(to right, gray 2px, transparent 2px);
+}
+.mapgen-list-folder > h2 {
+  margin: 0;
+  padding: .25rem;
+  translate: -10px;
+  border: 2px solid gray;
+  width: fit-content;
 }
