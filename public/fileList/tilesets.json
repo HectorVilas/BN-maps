@@ -1,115 +1,115 @@
 {
   "ASCIITileset": {
     "files": [
-      "./gfx/ASCIITileset/ASCIITiles.png/",
-      "./gfx/ASCIITileset/fallback.png/",
-      "./gfx/ASCIITileset/tileset.txt/",
-      "./gfx/ASCIITileset/tile_config.json/"
+      "gfx/ASCIITileset/ASCIITiles.png/",
+      "gfx/ASCIITileset/fallback.png/",
+      "gfx/ASCIITileset/tileset.txt/",
+      "gfx/ASCIITileset/tile_config.json/"
     ]
   },
   "BrownLikeBears": {
     "files": [
-      "./gfx/BrownLikeBears/fallback.png/",
-      "./gfx/BrownLikeBears/tiles.png/",
-      "./gfx/BrownLikeBears/tileset.txt/",
-      "./gfx/BrownLikeBears/tile_config.json/"
+      "gfx/BrownLikeBears/fallback.png/",
+      "gfx/BrownLikeBears/tiles.png/",
+      "gfx/BrownLikeBears/tileset.txt/",
+      "gfx/BrownLikeBears/tile_config.json/"
     ]
   },
   "ChestHole16Tileset": {
     "files": [
-      "./gfx/ChestHole16Tileset/fallback.png/",
-      "./gfx/ChestHole16Tileset/tiles.png/",
-      "./gfx/ChestHole16Tileset/tiles24.png/",
-      "./gfx/ChestHole16Tileset/tileset.txt/",
-      "./gfx/ChestHole16Tileset/tile_config.json/",
-      "./gfx/ChestHole16Tileset/tree.png/"
+      "gfx/ChestHole16Tileset/fallback.png/",
+      "gfx/ChestHole16Tileset/tiles.png/",
+      "gfx/ChestHole16Tileset/tiles24.png/",
+      "gfx/ChestHole16Tileset/tileset.txt/",
+      "gfx/ChestHole16Tileset/tile_config.json/",
+      "gfx/ChestHole16Tileset/tree.png/"
     ]
   },
   "HitButton_iso": {
     "files": [
-      "./gfx/HitButton_iso/fallback.png/",
-      "./gfx/HitButton_iso/HitButton_iso.png/",
-      "./gfx/HitButton_iso/tileset.txt/",
-      "./gfx/HitButton_iso/tile_config.json/"
+      "gfx/HitButton_iso/fallback.png/",
+      "gfx/HitButton_iso/HitButton_iso.png/",
+      "gfx/HitButton_iso/tileset.txt/",
+      "gfx/HitButton_iso/tile_config.json/"
     ]
   },
   "HoderTileset": {
     "files": [
-      "./gfx/HoderTileset/hodertiles.png/",
-      "./gfx/HoderTileset/hodertiles_fallback.png/",
-      "./gfx/HoderTileset/hodertiles_oversized.png/",
-      "./gfx/HoderTileset/tileset.txt/",
-      "./gfx/HoderTileset/tile_config.json/"
+      "gfx/HoderTileset/hodertiles.png/",
+      "gfx/HoderTileset/hodertiles_fallback.png/",
+      "gfx/HoderTileset/hodertiles_oversized.png/",
+      "gfx/HoderTileset/tileset.txt/",
+      "gfx/HoderTileset/tile_config.json/"
     ]
   },
   "MSX++UnDeadPeopleEdition": {
     "files": [
-      "./gfx/MSX++UnDeadPeopleEdition/fallback.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/huge.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/large_stuff.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/large_terrain.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/normal_character.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/normal_fields.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/normal_furniture.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/normal_items.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/normal_monsters.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/normal_offset.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/normal_stuff.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/normal_terrain.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/normal_vehicle_parts.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/Temporary-Maptiles-Large.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/Temporary-maptiles.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/Temporary.png/",
-      "./gfx/MSX++UnDeadPeopleEdition/tileset.txt/",
-      "./gfx/MSX++UnDeadPeopleEdition/tile_config.json/",
-      "./gfx/MSX++UnDeadPeopleEdition/wide.png/"
+      "gfx/MSX++UnDeadPeopleEdition/fallback.png/",
+      "gfx/MSX++UnDeadPeopleEdition/huge.png/",
+      "gfx/MSX++UnDeadPeopleEdition/large_stuff.png/",
+      "gfx/MSX++UnDeadPeopleEdition/large_terrain.png/",
+      "gfx/MSX++UnDeadPeopleEdition/normal_character.png/",
+      "gfx/MSX++UnDeadPeopleEdition/normal_fields.png/",
+      "gfx/MSX++UnDeadPeopleEdition/normal_furniture.png/",
+      "gfx/MSX++UnDeadPeopleEdition/normal_items.png/",
+      "gfx/MSX++UnDeadPeopleEdition/normal_monsters.png/",
+      "gfx/MSX++UnDeadPeopleEdition/normal_offset.png/",
+      "gfx/MSX++UnDeadPeopleEdition/normal_stuff.png/",
+      "gfx/MSX++UnDeadPeopleEdition/normal_terrain.png/",
+      "gfx/MSX++UnDeadPeopleEdition/normal_vehicle_parts.png/",
+      "gfx/MSX++UnDeadPeopleEdition/Temporary-Maptiles-Large.png/",
+      "gfx/MSX++UnDeadPeopleEdition/Temporary-maptiles.png/",
+      "gfx/MSX++UnDeadPeopleEdition/Temporary.png/",
+      "gfx/MSX++UnDeadPeopleEdition/tileset.txt/",
+      "gfx/MSX++UnDeadPeopleEdition/tile_config.json/",
+      "gfx/MSX++UnDeadPeopleEdition/wide.png/"
     ]
   },
   "RetroDays+Tileset": {
     "files": [
-      "./gfx/RetroDays+Tileset/fallback.png/",
-      "./gfx/RetroDays+Tileset/tiles.png/",
-      "./gfx/RetroDays+Tileset/tileset.txt/",
-      "./gfx/RetroDays+Tileset/tiles_20x20.png/",
-      "./gfx/RetroDays+Tileset/tile_config.json/"
+      "gfx/RetroDays+Tileset/fallback.png/",
+      "gfx/RetroDays+Tileset/tiles.png/",
+      "gfx/RetroDays+Tileset/tileset.txt/",
+      "gfx/RetroDays+Tileset/tiles_20x20.png/",
+      "gfx/RetroDays+Tileset/tile_config.json/"
     ]
   },
   "RetroDaysTileset": {
     "files": [
-      "./gfx/RetroDaysTileset/fallback.png/",
-      "./gfx/RetroDaysTileset/tiles.png/",
-      "./gfx/RetroDaysTileset/tileset.txt/",
-      "./gfx/RetroDaysTileset/tiles_20x20.png/",
-      "./gfx/RetroDaysTileset/tile_config.json/"
+      "gfx/RetroDaysTileset/fallback.png/",
+      "gfx/RetroDaysTileset/tiles.png/",
+      "gfx/RetroDaysTileset/tileset.txt/",
+      "gfx/RetroDaysTileset/tiles_20x20.png/",
+      "gfx/RetroDaysTileset/tile_config.json/"
     ]
   },
   "files": [
-    "./gfx/tile_config.json/",
-    "./gfx/tile_config_template.json/",
-    "./gfx/tinytile.png/"
+    "gfx/tile_config.json/",
+    "gfx/tile_config_template.json/",
+    "gfx/tinytile.png/"
   ],
   "UltimateCataclysm": {
     "files": [
-      "./gfx/UltimateCataclysm/centered.png/",
-      "./gfx/UltimateCataclysm/fallback.png/",
-      "./gfx/UltimateCataclysm/filler.png/",
-      "./gfx/UltimateCataclysm/fillergiant.png/",
-      "./gfx/UltimateCataclysm/fillerhoder.png/",
-      "./gfx/UltimateCataclysm/filler_tall.png/",
-      "./gfx/UltimateCataclysm/giant.png/",
-      "./gfx/UltimateCataclysm/huge.png/",
-      "./gfx/UltimateCataclysm/human_body.png/",
-      "./gfx/UltimateCataclysm/human_body_plus.png/",
-      "./gfx/UltimateCataclysm/incomplete.png/",
-      "./gfx/UltimateCataclysm/incomplete_large.png/",
-      "./gfx/UltimateCataclysm/incomplete_tall.png/",
-      "./gfx/UltimateCataclysm/large.png/",
-      "./gfx/UltimateCataclysm/large_ridden.png/",
-      "./gfx/UltimateCataclysm/normal.png/",
-      "./gfx/UltimateCataclysm/small.png/",
-      "./gfx/UltimateCataclysm/tall.png/",
-      "./gfx/UltimateCataclysm/tileset.txt/",
-      "./gfx/UltimateCataclysm/tile_config.json/"
+      "gfx/UltimateCataclysm/centered.png/",
+      "gfx/UltimateCataclysm/fallback.png/",
+      "gfx/UltimateCataclysm/filler.png/",
+      "gfx/UltimateCataclysm/fillergiant.png/",
+      "gfx/UltimateCataclysm/fillerhoder.png/",
+      "gfx/UltimateCataclysm/filler_tall.png/",
+      "gfx/UltimateCataclysm/giant.png/",
+      "gfx/UltimateCataclysm/huge.png/",
+      "gfx/UltimateCataclysm/human_body.png/",
+      "gfx/UltimateCataclysm/human_body_plus.png/",
+      "gfx/UltimateCataclysm/incomplete.png/",
+      "gfx/UltimateCataclysm/incomplete_large.png/",
+      "gfx/UltimateCataclysm/incomplete_tall.png/",
+      "gfx/UltimateCataclysm/large.png/",
+      "gfx/UltimateCataclysm/large_ridden.png/",
+      "gfx/UltimateCataclysm/normal.png/",
+      "gfx/UltimateCataclysm/small.png/",
+      "gfx/UltimateCataclysm/tall.png/",
+      "gfx/UltimateCataclysm/tileset.txt/",
+      "gfx/UltimateCataclysm/tile_config.json/"
     ]
   }
 }
